@@ -9,6 +9,10 @@ import LoginScreen from "./screens/LoginScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import HomePage from "./screens/HomePage";
 import ProfileScreen from "./screens/ProfileScreen";
+import PatientProfileScreen from "./screens/PatientProfileScreen";
+import LabResults from "./screens/LabResults";
+import XRayResults from "./screens/XRayResults";
+import Myvisit from "./screens/Myvisit";
 
 
 const StackNavigator = () => {
@@ -35,9 +39,54 @@ const StackNavigator = () => {
         />
        <Tab.Screen
             name="Profile"
-            component={ProfileScreen}
+            component={PatientProfileScreen}
             options={{
               tabBarLabel: "Profile",
+              tabBarLabelStyle: { color: "black" },
+              headerShown: false,
+              tabBarIcon: ({ focused }) =>
+                focused ? (
+                  <Ionicons name="person" size={30} color="#566D8F" />
+                ) : (
+                  <Ionicons name="person-outline" size={30} color="#566D8F" />
+                ),
+            }}
+          />
+       <Tab.Screen
+            name="LabResults"
+            component={LabResults}
+            options={{
+              tabBarLabel: "LabResults",
+              tabBarLabelStyle: { color: "black" },
+              headerShown: false,
+              tabBarIcon: ({ focused }) =>
+                focused ? (
+                  <Ionicons name="person" size={30} color="#566D8F" />
+                ) : (
+                  <Ionicons name="person-outline" size={30} color="#566D8F" />
+                ),
+            }}
+          />
+       <Tab.Screen
+            name="XRayResults"
+            component={XRayResults}
+            options={{
+              tabBarLabel: "XRayResults",
+              tabBarLabelStyle: { color: "black" },
+              headerShown: false,
+              tabBarIcon: ({ focused }) =>
+                focused ? (
+                  <Ionicons name="person" size={30} color="#566D8F" />
+                ) : (
+                  <Ionicons name="person-outline" size={30} color="#566D8F" />
+                ),
+            }}
+          />
+       <Tab.Screen
+            name="Myvisit"
+            component={Myvisit}
+            options={{
+              tabBarLabel: "Myvisit",
               tabBarLabelStyle: { color: "black" },
               headerShown: false,
               tabBarIcon: ({ focused }) =>

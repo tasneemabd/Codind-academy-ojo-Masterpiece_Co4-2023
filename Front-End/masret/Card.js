@@ -68,7 +68,9 @@ const styles = StyleSheet.create({
     card: {
       width: 310,
       height: 200,
-      backgroundColor: 'white',
+      backgroundColor: '#566D8F',
+      backgroundGradientFrom: '#566D3F',
+      backgroundGradientTo: '#efefef',
       borderRadius: 10,
       shadowColor: 'rgb(50, 50, 50)',
       shadowOpacity: 0.5,
